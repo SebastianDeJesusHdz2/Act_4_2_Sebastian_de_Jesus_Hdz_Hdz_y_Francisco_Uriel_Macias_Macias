@@ -1,4 +1,5 @@
 import { Boton1, Boton2, Boton3 } from './components/Botones'
+import Badge from './components/Badges'
 
 function App() {
   
@@ -23,7 +24,14 @@ function App() {
         <Boton3 tipo="Desactivated" />
         <Boton3 tipo="DefaultDark" />
       </div>
+
+      <Badge variant="default" text="Badge" />
+      <Badge variant="blue" text="Badge" />
+      <Badge variant="yellow" text="Badge" />
+      <Badge variant="red" text="Badge" />
+
     </div>
+    
   )
 }
 
