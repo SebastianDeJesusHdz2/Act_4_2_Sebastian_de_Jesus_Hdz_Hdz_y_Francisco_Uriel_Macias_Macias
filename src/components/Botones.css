@@ -1,0 +1,127 @@
+/* BOTON */
+
+.btn-base {
+  width: 160px;
+  height: 40px;
+  padding: 0 var(--esp-4);
+  border-radius: var(--radio);
+  font-size: var(--tam-boton);
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--esp-1);
+}
+
+.btn-icono {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: var(--radio);
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-base:disabled,
+.btn-icono:disabled {
+  cursor: not-allowed;
+}
+
+.boton1-ButtonsDefault {
+  background: var(--color-primario);
+  color: white;
+  border-color: var(--color-primario);
+}
+
+.boton1-ButtonsSelected {
+  background: white;
+  color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+
+.boton1-ButtonsHover {
+  background: var(--color-secundario);
+  color: white;
+  border-color: var(--color-secundario);
+}
+
+.boton1-ButtonsDesactivated {
+  background: white;
+  color: var(--color-gris-400);
+  border-color: var(--color-gris-400);
+}
+
+.boton1-ButtonsDefaultDark {
+  background: white;
+  color: var(--color-informativo);
+  border-color: var(--color-informativo);
+}
+
+.boton2-Default {
+  background: var(--color-primario);
+  color: white;
+  border-color: var(--color-primario);
+}
+
+.boton2-Selected {
+  background: white;
+  color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+
+.boton2-Hover {
+  background: var(--color-secundario);
+  color: white;
+  border-color: var(--color-secundario);
+}
+
+.boton2-Desactivated {
+  background: white;
+  color: var(--color-gris-400);
+  border-color: var(--color-gris-400);
+}
+
+.boton2-DefaultDark {
+  background: white;
+  color: var(--color-informativo);
+  border-color: var(--color-informativo);
+}
+
+.boton3-Selected {
+  background: white;
+  color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+
+.boton3-Hover {
+  background: var(--color-secundario);
+  color: white;
+  border-color: var(--color-secundario);
+}
+
+.boton3-Default {
+  background: var(--color-primario);
+  color: white;
+  border-color: var(--color-primario);
+}
+
+.boton3-Desactivated {
+  background: white;
+  color: var(--color-gris-400);
+  border-color: var(--color-gris-400);
+}
+
+.boton3-DefaultDark {
+  background: white;
+  color: var(--color-informativo);
+  border-color: var(--color-informativo);
+}
