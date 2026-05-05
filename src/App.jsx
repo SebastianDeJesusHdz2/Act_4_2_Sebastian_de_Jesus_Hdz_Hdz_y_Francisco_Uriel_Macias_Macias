@@ -1,10 +1,13 @@
 import { Boton1, Boton2, Boton3 } from './components/Botones'
 import Badge from './components/Badges'
+import TextInput from './components/TextInput'
+import Celda from './components/Celdas'
 
 function App() {
   
   return (
     <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      
       <Boton1 tipo="ButtonsDefault" />
       <Boton1 tipo="ButtonsSelected" txt="Aceptar" />
       <Boton1 tipo="ButtonsHover" />
@@ -30,6 +33,7 @@ function App() {
       <Badge variant="yellow" text="Badge" />
       <Badge variant="red" text="Badge" />
 
+      <TextInput placeholder="Texto" mode="Light" />
     </div>
     
   )

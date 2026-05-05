@@ -4,8 +4,7 @@ import Icon from '../icons/icon';
 export default function Badge({
   variant = 'default',
   text = 'Badge',
-  disabled = false,
-  onClick
+  disabled = false
 }) {
   const cls = `
     badge-base 
@@ -14,11 +13,7 @@ export default function Badge({
   `;
 
   return (
-    <button
-      className={cls}
-      disabled={disabled}
-      onClick={!disabled ? onClick : undefined}
-    >
+    <span className={cls}>
       <div className="badge-icon">
         <Icon name="eye" />
       </div>
@@ -28,6 +23,6 @@ export default function Badge({
       <div className="badge-icon">
         <Icon name="x" />
       </div>
-    </button>
+    </span>
   );
 }
