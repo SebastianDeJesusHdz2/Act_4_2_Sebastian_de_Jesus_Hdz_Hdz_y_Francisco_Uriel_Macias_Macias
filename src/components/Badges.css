@@ -1,63 +1,85 @@
-/* BADGE */
+.badge-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 80px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  min-width: 111px;
+  text-align: center;
+}
 
-/* Badge propiedades */
+.badge-light {
+  color: #111827;
+}
+
+.badge-dark {
+  color: #ffffff;
+}
+
+.badge-default.badge-light {
+  background: #e2ffbc;
+  color: #4a9800;
+}
+
+.badge-default.badge-dark {
+  background: #4a9800;
+  color: #e2ffbc;
+}
+
+.badge-blue.badge-light {
+  background: #b0ffff;
+  color: #0a58ca;
+}
+
+.badge-blue.badge-dark {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), #00b2e3;
+  color: #e2ffbc;
+}
+
+.badge-yellow.badge-light {
+  background: #fff9c4;
+  color: #ff8b00;
+}
+
+.badge-yellow.badge-dark {
+  background: #ffea00;
+  color: #111827;
+}
+
+.badge-red.badge-light {
+  background: #ffd2c0;
+  color: #f02;
+}
+
+.badge-red.badge-dark {
+  background: #f02;
+  color: #ffd2c0;
+}
 
 .badge-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 16px;
   height: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.badge-icon svg {
-  width: 100%;
-  height: 100%;
+.badge-icon-left {
+  margin-left: 0;
 }
 
-.badge-base {
-  cursor: pointer;
-  display: flex;
-  gap: 4px;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 12px;
-  border-radius: 80px;
-  width: 111px;
-  position: relative;
-  border: none;
-  font-family: 'Open Sans', sans-serif;
+.badge-icon-right {
+  margin-right: 0;
 }
 
 .badge-text {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-/* Badge default */
-
-.badge-default {
-  background: var(--color-exito-suave);
-  color: var(--color-exito);
-}
-
-
-/* Badge blue */
-.badge-blue{
-  background: var(--color-fondo-suave);
-  color: var(--color-secundario);
-}
-
-/* Badge yellow */
-.badge-yellow{
-  background: var(--color-warning-suave);
-  color: var(--color-warning-texto);
-}
-
-/* Badge red */
-.badge-red{
-  background: var(--color-error-suave);
-  color: var(--color-error);
+  display: inline-flex;
+  align-items: center;
 }

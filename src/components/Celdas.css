@@ -1,0 +1,171 @@
+.celdas-cell {
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  padding: 10px 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.celdas-table-white {
+  background: white;
+  border-color: #f4f7f9;
+  gap: 8px;
+  height: 60px;
+  justify-content: center;
+  width: 233.988px;
+}
+
+.celdas-table-gray {
+  background: #f4f7f9;
+  border-color: white;
+  gap: 8px;
+  height: 60px;
+  justify-content: center;
+  width: 233.988px;
+}
+
+.celdas-table-black {
+  background: black;
+  border-color: #f9fafb;
+  gap: 8px;
+  height: 60px;
+  justify-content: center;
+  width: 233.988px;
+}
+
+.celdas-texto-white {
+  background: white;
+  border-color: #f4f7f9;
+  height: 65px;
+  width: 250px;
+}
+
+.celdas-texto-gray {
+  background: #f4f7f9;
+  border-color: #f4f7f9;
+  height: 65px;
+  width: 250px;
+}
+
+.celdas-texto-black {
+  background: black;
+  border-color: #f9fafb;
+  height: 65px;
+  width: 250px;
+}
+
+.celdas-dates-white {
+  background: white;
+  border-color: #f4f7f9;
+  gap: 12px;
+  height: 60px;
+  width: 250px;
+}
+
+.celdas-dates-gray {
+  background: #f4f7f9;
+  border-color: #f4f7f9;
+  gap: 12px;
+  height: 60px;
+  width: 250px;
+}
+
+.celdas-dates-black {
+  background: black;
+  border-color: #f4f7f9;
+  gap: 12px;
+  height: 60px;
+  width: 250px;
+}
+
+.celdas-delete-white {
+  background: white;
+  border-color: #f4f7f9;
+  gap: 30px;
+  height: 60px;
+  width: 250px;
+}
+
+.celdas-delete-gray {
+  background: #f4f7f9;
+  border-color: #f4f7f9;
+  gap: 30px;
+  height: 60px;
+  width: 250px;
+}
+
+.celdas-delete-black {
+  background: black;
+  border-color: #f4f7f9;
+  gap: 30px;
+  height: 60px;
+  width: 250px;
+}
+
+.celdas-text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  position: relative;
+  flex-shrink: 0;
+  white-space: nowrap;
+  color: #111827;
+}
+
+.celdas-text-table {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.celdas-text-texto {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.celdas-text-black {
+  color: #f4f7f9;
+}
+
+.celdas-text-table-black {
+  color: #f9fafb;
+}
+
+.celdas-icon {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.celdas-icon-normal {
+  width: 16px;
+  height: 16px;
+}
+
+.celdas-icon-medium {
+  width: 15px;
+  height: 16.25px;
+}
+
+.celdas-icon-small {
+  width: 12px;
+  height: 13px;
+}
+
+
+.celdas-date-text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  position: relative;
+  flex-shrink: 0;
+  font-size: 16px;
+  white-space: nowrap;
+  color: #111827;
+}
+
+.celdas-date-text-black {
+  color: white;
+}
