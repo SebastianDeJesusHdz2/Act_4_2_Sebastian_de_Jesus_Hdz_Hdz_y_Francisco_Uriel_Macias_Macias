@@ -1,28 +1,33 @@
 import './Badges.css'
-import Icon from '../icons/icon';
+import Icon from '../icons/icon'
 
 export default function Badge({
   variant = 'default',
-  text = 'Badge',
-  disabled = false
+  mode = 'light',
+  text = 'Badge'
 }) {
-  const cls = `
-    badge-base 
-    badge-${variant} 
-    ${disabled ? "badge-disabled" : ""}
-  `;
+  const isLight = mode === 'light'
+  const isDark = mode === 'black'
+
+  const cls = [
+    'badge-base',
+    `badge-${variant}`,
+    isLight ? 'badge-light' : 'badge-dark'
+  ]
+    .filter(Boolean)
+    .join(' ')
+
+  const iconColor = isDark ? '#FFFFFF' : 'currentColor'
 
   return (
-    <span className={cls}>
-      <div className="badge-icon">
+    <button className={cls} type="button">
+      <span className="badge-icon badge-icon-left">
         <Icon name="eye" />
-      </div>
-
+      </span>
       <span className="badge-text">{text}</span>
-
-      <div className="badge-icon">
+      <span className="badge-icon badge-icon-right">
         <Icon name="x" />
-      </div>
-    </span>
-  );
+      </span>
+    </button>
+  )
 }

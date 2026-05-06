@@ -1,6 +1,7 @@
 import { Boton1, Boton2, Boton3 } from './components/Botones'
-import Badge from './components/Badges'
 import Celdas from './components/Celdas'
+import TextInput from './components/TextInput'
+import Badge from './components/Badges'
 
 function App() {
   
@@ -26,10 +27,17 @@ function App() {
         <Boton3 tipo="DefaultDark" />
       </div>
 
-      <Badge variant="default" text="Badge" />
-      <Badge variant="blue" text="Badge" />
-      <Badge variant="yellow" text="Badge" />
-      <Badge variant="red" text="Badge" />
+      <Badge variant="default" mode="light" text="Badge" />
+      <Badge variant="default" mode="black" text="Badge" />
+      <Badge variant="blue" mode="light" text="Badge" />
+      <Badge variant="blue" mode="black" text="Badge" />
+      <Badge variant="yellow" mode="light" text="Badge" />
+      <Badge variant="yellow" mode="black" text="Badge" />
+      <Badge variant="red" mode="light" text="Badge" />
+      <Badge variant="red" mode="black" text="Badge" />
+
+
+      <TextInput placeholder="Ingrese su texto aquí" />
 
       <Celdas property1="Table" property2="White" />
       <Celdas property1="Texto" property2="White" />
