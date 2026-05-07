@@ -36,6 +36,23 @@
   cursor: not-allowed;
 }
 
+/* icono hereda el color del boton */
+.btn-ico-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+}
+
+.btn-ico-wrap svg {
+  width: 16px;
+  height: 16px;
+  color: inherit;
+  stroke: currentColor;
+  fill: none;
+}
+
 .boton1-ButtonsDefault {
   background: var(--color-primario);
   color: white;
@@ -105,13 +122,13 @@
 .boton3-Hover {
   background: var(--color-secundario);
   color: white;
-  border-color: var(--color-secundario);
+  border-color: white;
 }
 
 .boton3-Default {
   background: var(--color-primario);
   color: white;
-  border-color: var(--color-primario);
+  border-color: white;
 }
 
 .boton3-Desactivated {

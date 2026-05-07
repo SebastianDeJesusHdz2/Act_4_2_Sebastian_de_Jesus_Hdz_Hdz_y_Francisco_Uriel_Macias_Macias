@@ -169,3 +169,9 @@
 .celdas-date-text-black {
   color: white;
 }
+
+.celdas-icon-black svg {
+  color: white;
+  stroke: white;
+  fill: white;
+}

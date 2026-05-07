@@ -1,0 +1,13 @@
+/* FOOTER */
+
+.footer-contenedor {
+  width: 100%;
+  height: 64px;
+  background: var(--color-secundario);
+  border-radius: var(--radio);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--esp-4);
+  box-sizing: border-box;
+}

@@ -1,5 +1,6 @@
 // BOTON
 import './Botones.css'
+import Icon from '../icons/icon'
 
 export function Boton1({
   tipo = 'ButtonsDefault',
@@ -23,7 +24,7 @@ export function Boton1({
 export function Boton2({
   tipo = 'Default',
   txt = 'Button text',
-  ico = '⌂',
+  ico = 'home',
   click
 }) {
   const des = tipo === 'Desactivated'
@@ -35,7 +36,7 @@ export function Boton2({
       disabled={des}
       onClick={!des ? click : undefined}
     >
-      <span>{ico}</span>
+      <span className="btn-ico-wrap"><Icon name={ico} /></span>
       <span>{txt}</span>
     </button>
   )
@@ -43,7 +44,7 @@ export function Boton2({
 
 export function Boton3({
   tipo = 'Default',
-  ico = '⌂',
+  ico = 'home',
   click
 }) {
   const des = tipo === 'Desactivated'
@@ -55,7 +56,7 @@ export function Boton3({
       disabled={des}
       onClick={!des ? click : undefined}
     >
-      <span>{ico}</span>
+      <span className="btn-ico-wrap"><Icon name={ico} /></span>
     </button>
   )
 }

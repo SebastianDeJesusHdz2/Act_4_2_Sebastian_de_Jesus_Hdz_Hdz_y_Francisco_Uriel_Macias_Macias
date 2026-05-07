@@ -36,7 +36,7 @@ function Celdas({ property1 = "Table", property2 = "White" }) {
         </div>
       )}
       {isDates && (
-        <div className={`celdas-icon ${isDeleteModify ? 'celdas-icon-small' : isDates ? 'celdas-icon-medium' : 'celdas-icon-normal'}`}>
+        <div className={`celdas-icon ${isDates ? 'celdas-icon-medium' : 'celdas-icon-normal'} ${isBlack ? 'celdas-icon-black' : ''}`}>
           <Icon name="calendar" />
         </div>
       )}
@@ -47,13 +47,13 @@ function Celdas({ property1 = "Table", property2 = "White" }) {
       )}
       {isDeleteModify && (
         <>
-          <div className="celdas-icon celdas-icon-small">
+          <div className={`celdas-icon celdas-icon-small ${isBlack ? 'celdas-icon-black' : ''}`}>
             <Icon name="trash" />
           </div>
-          <div className="celdas-icon celdas-icon-small">
+          <div className={`celdas-icon celdas-icon-small ${isBlack ? 'celdas-icon-black' : ''}`}>
             <Icon name="pencil" />
           </div>
-          <div className="celdas-icon celdas-icon-small">
+          <div className={`celdas-icon celdas-icon-small ${isBlack ? 'celdas-icon-black' : ''}`}>
             <Icon name="treePoints" />
           </div>
         </>
