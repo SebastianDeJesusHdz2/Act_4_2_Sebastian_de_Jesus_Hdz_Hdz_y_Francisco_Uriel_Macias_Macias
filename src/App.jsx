@@ -6,6 +6,7 @@ import TextInput from "./components/TextInput";
 import Badge from "./components/Badges";
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Calendario from "./components/Calendario";
 
 
 function App() {
@@ -161,6 +162,13 @@ function App() {
         onCheck={() => console.log('check')}
         onUsuario={() => console.log('usuario')}
       />
+      // Calendario modo light
+      <Calendario modo="light"></Calendario>
+      // Calendario modo dark
+      <Calendario modo="dark"></Calendario>
+      // Calendario modo default (light)
+      
+
     </div>
   );
 }
