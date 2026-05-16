@@ -1,0 +1,52 @@
+.materias {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* FILTRO */
+.materias-filtro {
+  width: 100%;
+}
+
+/* LISTA */
+.materias-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* CARD */
+.materia-card {
+  display: grid;
+  grid-template-columns: 250px 1fr 180px;
+  align-items: center;
+  gap: 16px;
+
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* NOMBRE */
+.materia-nombre {
+  width: 100%;
+}
+
+/* PROGRESS */
+.materia-progress {
+  width: 100%;
+}
+
+/* BADGE */
+.materia-badge {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* BOTÓN */
+.materias-acciones {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}

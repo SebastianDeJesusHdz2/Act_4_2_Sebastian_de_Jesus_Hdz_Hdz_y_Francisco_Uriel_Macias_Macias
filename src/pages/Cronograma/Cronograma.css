@@ -1,0 +1,27 @@
+.cronograma {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* FILTROS */
+.cronograma-filtros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* CALENDARIO */
+.cronograma-calendario {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* BOTONES */
+.cronograma-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+}
