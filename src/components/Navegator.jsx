@@ -1,21 +1,27 @@
-import './Navegator.css'
+import "./Navegator.css";
+import { useNavigate } from "react-router-dom";
 
-const iconAccount = 'https://www.figma.com/api/mcp/asset/a9fd4eb2-b5c8-45bc-a11d-cd1e386fd146'
-const iconDoc = 'https://www.figma.com/api/mcp/asset/5f8e7912-b3b0-4cc5-9306-59c88f4bc33e'
-const iconNotifications = 'https://www.figma.com/api/mcp/asset/8a2e8ac2-836a-4980-b26d-ad5d5da15886'
+const iconAccount =
+  "https://www.figma.com/api/mcp/asset/a9fd4eb2-b5c8-45bc-a11d-cd1e386fd146";
+const iconDoc =
+  "https://www.figma.com/api/mcp/asset/5f8e7912-b3b0-4cc5-9306-59c88f4bc33e";
+const iconNotifications =
+  "https://www.figma.com/api/mcp/asset/8a2e8ac2-836a-4980-b26d-ad5d5da15886";
 
 function Navegator({ abierto }) {
+  const navigate = useNavigate();
+
   const topItems = [
-    { icon: iconAccount, label: 'Account Configuration' },
-    { icon: iconNotifications, label: 'Notifications' },
-  ]
+    { icon: iconAccount, label: "Account Configuration" },
+    { icon: iconNotifications, label: "Notifications" },
+  ];
 
   const links = [
-    { label: 'Dashboard' },
-    { label: 'Cronogama' },
-    { label: 'Registro de avance' },
-    { label: 'Materias Colegiadas' },
-  ]
+    { label: "Dashboard", path: "/dashboard" },
+    { label: "Cronograma", path: "/cronograma" },
+    { label: "Registro de avance", path: "/registro-avance" },
+    { label: "Materias Colegiadas", path: "/materias" },
+  ];
 
   return (
     <aside className={`navegador ${abierto ? "open" : "closed"}`}>
@@ -37,14 +43,18 @@ function Navegator({ abierto }) {
 
       <div className="navegador-link-list">
         {links.map((item) => (
-          <div key={item.label} className="navegador-link-row">
+          <div
+            key={item.label}
+            className="navegador-link-row"
+            onClick={() => navigate(item.path)}
+          >
             <img src={iconDoc} alt="" className="navegador-link-icon" />
             <span className="navegador-link-text">{item.label}</span>
           </div>
         ))}
       </div>
     </aside>
-  )
+  );
 }
 
-export default Navegator
+export default Navegator;
