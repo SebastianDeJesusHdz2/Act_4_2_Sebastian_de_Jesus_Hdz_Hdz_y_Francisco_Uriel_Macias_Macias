@@ -1,0 +1,44 @@
+.registro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* FECHA */
+.registro-fecha {
+  width: 100%;
+}
+
+/* LISTADO */
+.registro-listado {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* CONTROLES */
+.registro-controles {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+/* BOTONES FLECHA */
+.btn-icon {
+  background: #e2e8f0;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ESTADO */
+.registro-estado {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.estado-guardado {
+  font-size: 12px;
+  color: #16a34a;
+}
