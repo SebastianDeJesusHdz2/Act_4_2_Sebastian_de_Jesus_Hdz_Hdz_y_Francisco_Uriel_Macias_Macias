@@ -4,7 +4,7 @@ const iconAccount = 'https://www.figma.com/api/mcp/asset/a9fd4eb2-b5c8-45bc-a11d
 const iconDoc = 'https://www.figma.com/api/mcp/asset/5f8e7912-b3b0-4cc5-9306-59c88f4bc33e'
 const iconNotifications = 'https://www.figma.com/api/mcp/asset/8a2e8ac2-836a-4980-b26d-ad5d5da15886'
 
-function Navegator() {
+function Navegator({ abierto }) {
   const topItems = [
     { icon: iconAccount, label: 'Account Configuration' },
     { icon: iconNotifications, label: 'Notifications' },
@@ -18,7 +18,7 @@ function Navegator() {
   ]
 
   return (
-    <aside className="navegador">
+    <aside className={`navegador ${abierto ? "open" : "closed"}`}>
       <div className="navegador-header">
         <h2 className="navegador-titulo">Sample text</h2>
         <p className="navegador-subtitulo">Profesor:</p>

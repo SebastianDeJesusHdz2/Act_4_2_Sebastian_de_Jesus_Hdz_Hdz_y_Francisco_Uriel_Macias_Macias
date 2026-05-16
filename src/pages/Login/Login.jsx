@@ -2,8 +2,16 @@ import "./Login.css";
 import TextInput from "../../components/TextInput";
 import  Card  from "../../components/Card";
 import { Boton1 } from "../../components/Botones";
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
+
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate("/dashboard");
+  };
+
   return (
     <div className="login-container">
       <div className="login-card">
@@ -18,12 +26,14 @@ export const Login = () => {
         {/* Formulario */}
         <div className="login-form">
           <label>ID Profesor</label>
-          <TextInput placeholder="Ingrese su ID" />
+          <TextInput placeholder="ID profesor" />
 
           <label>Contraseña</label>
-          <TextInput placeholder="Ingrese su contraseña" />
+          <TextInput placeholder="Contraseña" />
 
-          <Boton1 tipo="ButtonsDefault" txt="Iniciar sesión" />
+          <div onClick={handleLogin}>
+            <Boton1 tipo="ButtonsSelected" txt="Iniciar sesión" />
+          </div>
         </div>
 
       </div>

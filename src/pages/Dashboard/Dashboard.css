@@ -1,0 +1,52 @@
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.dashboard-sidebar {
+  width: 80px;
+  background: #0f2a44;
+}
+
+/* MAIN */
+.dashboard-main {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background: #f5f6f8;
+}
+
+/* TOP */
+.dashboard-top {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+/* GRID CURSOS */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.curso-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ACCIONES */
+.dashboard-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.dashboard-actions .right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

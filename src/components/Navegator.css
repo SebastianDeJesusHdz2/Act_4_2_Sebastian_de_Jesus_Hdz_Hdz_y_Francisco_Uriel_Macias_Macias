@@ -1,7 +1,6 @@
 /* NAVEGADOR */
 
 .navegador {
-  width: 280px;
   padding: 16px;
   background: white;
   border-radius: 0 8px 8px 0;
@@ -9,6 +8,16 @@
   flex-direction: column;
   gap: 24px;
   box-sizing: border-box;
+  position: fixed;   
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+
+  background: white;
+  z-index: 1000;
+
+  transition: transform 0.3s ease;
 }
 
 .navegador-header {
@@ -85,4 +94,14 @@
   font-weight: 400;
   line-height: 20px;
   color: #334155;
+}
+
+/* estado cerrado */
+.navegador.closed {
+  transform: translateX(-100%);
+}
+
+/* estado abierto */
+.navegador.open {
+  transform: translateX(0);
 }
