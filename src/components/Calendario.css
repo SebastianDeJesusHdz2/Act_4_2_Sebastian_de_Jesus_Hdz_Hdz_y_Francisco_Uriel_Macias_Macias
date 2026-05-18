@@ -1,13 +1,20 @@
 /* CALENDARIO */
 
 .calendario-contenedor {
-  width: 300px;
+  width: 100%;
   padding: 24px;
   border-radius: 8px;
   box-shadow: 2px 16px 19px rgba(0, 0, 0, 0.09);
   display: flex;
   flex-direction: column;
   gap: 22px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+  .calendario-contenedor {
+    padding: 10px;
+  }
 }
 
 .calendario-light {
@@ -54,7 +61,8 @@
 }
 
 .calendario-day-labels {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
   gap: 8px;
   width: 100%;
 }
@@ -86,26 +94,48 @@
 }
 
 .calendario-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
   gap: 8px;
   width: 100%;
 }
 
 .calendario-date {
-  width: 30px;
-  height: 30px;
+  flex: 1;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  cursor: pointer;
+  background: transparent !important;
 }
 
 .calendario-date span {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   font-family: 'Avenir Next LT Pro', 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .calendario-light .calendario-date:hover:not(.calendario-date-active) span {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .calendario-dark .calendario-date:hover:not(.calendario-date-active) span {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.calendario-date:active span {
+  transform: scale(0.85);
 }
 
 .calendario-light .calendario-date span {
@@ -116,11 +146,7 @@
   color: white;
 }
 
-.calendario-date-active {
-  background: var(--color-primario);
-  border-radius: 29px;
-}
-
 .calendario-date-active span {
+  background: var(--color-primario);
   color: var(--color-fondo-secundarios) !important;
 }

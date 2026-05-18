@@ -1,27 +1,93 @@
 .cronograma {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
+  width: 100%;
 }
 
 /* FILTROS */
 .cronograma-filtros {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.filtro-wrapper {
+  flex: 0 1 auto;
+}
+
+.filtro-wrapper > div {
+  width: 100% !important;
+}
+
+@media (max-width: 800px) {
+  .cronograma-filtros {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+  }
+  .filtro-wrapper {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+  .filtro-wrapper > div {
+    width: 100% !important;
+    height: 50px !important;
+    padding: 4px 8px !important;
+    gap: 4px !important;
+  }
+  .filtro-wrapper .celdas-text {
+    font-size: 14px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .filtro-wrapper .celdas-icon {
+    transform: scale(0.8);
+  }
 }
 
 /* CALENDARIO */
 .cronograma-calendario {
   background: white;
   border-radius: 8px;
-  padding: 16px;
+  padding: 24px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* BOTONES */
 .cronograma-acciones {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  align-items: flex-end;
+  gap: 10px;
+  width: 100%;
+}
+
+.acciones-top {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.acciones-bottom {
+  display: flex;
+  width: 100%;
+}
+
+/* El botón Aprobar Cronograma se estira de extremo a extremo */
+.acciones-bottom button {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Animación de hundimiento al tocarlo o hacerle clic */
+.cronograma-acciones button:active {
+  transform: scale(0.97);
+  transition: transform 0.2s ease;
 }

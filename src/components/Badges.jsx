@@ -1,17 +1,16 @@
-import './Badges.css'
-import Icon from '../icons/icon'
-
+import "./Badges.css";
+import Icon from "../icons/icon";
 export default function Badge({
-  variant = 'exito',
-  mode = 'light',
-  txt = 'Badge'
+  variant = "exito",
+  mode = "light",
+  txt = "Badge",
 }) {
   const cls = [
-    'badge-base',
+    "badge-base",
     `badge-${variant}`,
-    mode === 'dark' ? 'badge-dark' : 'badge-light'
-  ].join(' ')
-
+    mode === "dark" ? "badge-dark" : "badge-light",
+  ].join(" ");
+  // Renderiza UI
   return (
     <button className={cls} type="button">
       <span className="badge-icono">
@@ -22,5 +21,5 @@ export default function Badge({
         <Icon name="x" />
       </span>
     </button>
-  )
+  );
 }

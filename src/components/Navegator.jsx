@@ -23,6 +23,7 @@ function Navegator({ abierto }) {
     { label: "Materias Colegiadas", path: "/materias" },
   ];
 
+  // Renderiza UI
   return (
     <aside className={`navegador ${abierto ? "open" : "closed"}`}>
       <div className="navegador-header">

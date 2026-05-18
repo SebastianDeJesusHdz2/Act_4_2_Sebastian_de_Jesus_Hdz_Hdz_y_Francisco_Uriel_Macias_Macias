@@ -6,10 +6,7 @@ export default function Asset({ name }) {
   if (!asset) return null;
 
   return (
-    <svg
-      viewBox={asset.viewBox}
-      className="asset"
-    >
+    <svg viewBox={asset.viewBox} className="asset">
       {asset.paths}
     </svg>
   );

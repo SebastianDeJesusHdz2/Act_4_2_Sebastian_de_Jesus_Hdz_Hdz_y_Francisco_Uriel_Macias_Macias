@@ -9,7 +9,6 @@
 // import Calendario from "./components/Calendario";
 // import Navegator from "./components/Navegator";
 
-
 // function App() {
 //   return (
 //     <div
@@ -169,7 +168,6 @@
 //       <Calendario modo="dark"></Calendario>
 //       // Navegador
 //       <Navegator />
-      
 
 //     </div>
 //   );

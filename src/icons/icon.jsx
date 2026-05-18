@@ -6,10 +6,7 @@ export default function Icon({ name }) {
   if (!icon) return null;
 
   return (
-    <svg
-      viewBox={icon.viewBox}
-      className="icon"
-    >
+    <svg viewBox={icon.viewBox} className="icon">
       {icon.paths}
     </svg>
   );

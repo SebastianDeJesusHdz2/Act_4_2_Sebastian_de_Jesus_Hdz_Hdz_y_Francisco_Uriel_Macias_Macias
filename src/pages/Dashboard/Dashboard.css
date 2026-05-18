@@ -1,52 +1,223 @@
 .dashboard-layout {
   display: flex;
-  height: 100vh;
-}
-
-/* SIDEBAR */
-.dashboard-sidebar {
-  width: 80px;
-  background: #0f2a44;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
 }
 
 /* MAIN */
 .dashboard-main {
-  flex: 1;
-  padding: 16px;
-  overflow-y: auto;
-  background: #f5f6f8;
+  width: 100%;
+  padding: 25px; /* Padding de las pantallas en escritorio: 25 */
+  background: transparent;
+  max-width: 1600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+  .dashboard-main {
+    padding: 15px; /* Padding de las pantallas en Mobile: 15 */
+  }
 }
 
 /* TOP */
 .dashboard-top {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch; /* So the progress bar and cards match heights */
+  justify-content: space-between;
   gap: 16px;
-  margin: 16px 0;
+  margin-bottom: 16px;
+}
+
+.top-card-wrapper {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-progress-wrapper {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  background: white; /* Optional: if you want it to look like a card */
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.top-progress-wrapper .prog-contenedor {
+  max-width: 100%;
+  margin: 0; /* Center it properly */
+}
+
+/* Ensure inner cards fill the wrapper height if stretched */
+.top-card-wrapper .card-contenedor {
+  height: 100%;
+}
+
+@media (max-width: 800px) {
+  .dashboard-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "horas incidencias"
+      "progreso progreso";
+    gap: 16px;
+    align-items: stretch;
+  }
+  .top-card-wrapper:first-child {
+    grid-area: horas;
+  }
+  .top-progress-wrapper {
+    grid-area: progreso;
+  }
+  .top-card-wrapper:last-child {
+    grid-area: incidencias;
+  }
 }
 
 /* GRID CURSOS */
 .dashboard-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px; /* Espacio entre Cards mínimo : 60 */
+}
+
+@media (max-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 }
 
 .curso-card {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+}
+
+.curso-card .card-contenedor {
+  height: 100%;
 }
 
 /* ACCIONES */
+/* Desktop */
 .dashboard-actions {
   display: flex;
   justify-content: space-between;
-  margin-top: 24px;
+  align-items: flex-start;
+  margin-top: 40px;
 }
 
 .dashboard-actions .right {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 }
+
+/* Ensure action buttons are wide enough and identically sized */
+.dashboard-actions button {
+  width: 220px !important;
+  height: auto !important;
+  min-height: 44px !important;
+  text-align: center;
+}
+
+/* Mobile Actions */
+@media (max-width: 800px) {
+  .dashboard-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .dashboard-actions .left,
+  .dashboard-actions .right {
+    display: contents;
+  }
+  
+  /* Make buttons stretch horizontally and wrap text to prevent overflow */
+  .dashboard-actions button {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 44px !important;
+    white-space: normal !important;
+    padding: 8px !important;
+  }
+}
+
+/* MODAL STYLES */
+.dashboard-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.dashboard-modal {
+  width: 90%;
+  max-width: 600px;
+}
+
+.modal-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.modal-option-card {
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.modal-option-card.selected {
+  border-color: var(--color-primario);
+  background-color: rgba(30, 58, 95, 0.05); /* slightly blue background */
+}
+
+.modal-option-check {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--color-primario);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 24px;
+}

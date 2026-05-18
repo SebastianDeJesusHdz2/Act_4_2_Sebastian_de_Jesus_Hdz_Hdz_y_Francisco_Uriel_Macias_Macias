@@ -13,3 +13,10 @@
   flex: 1;
   padding: 16px;
 }
+
+.layout-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: transparent; /* No dims screen but blocks clicks */
+  z-index: 999; /* Below the sidebar which is 1000 */
+}

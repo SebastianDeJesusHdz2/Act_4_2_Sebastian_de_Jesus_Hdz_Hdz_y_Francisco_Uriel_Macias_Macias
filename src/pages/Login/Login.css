@@ -63,3 +63,27 @@
   width: 100%;
   margin-top: 8px;
 }
+
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-modal {
+  width: 90%;
+  max-width: 400px;
+}
+
+.login-modal-btn {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}

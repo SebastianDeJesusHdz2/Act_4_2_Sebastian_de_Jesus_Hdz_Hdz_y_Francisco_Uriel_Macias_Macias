@@ -6,6 +6,7 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import Cronograma from "../pages/Cronograma/Cronograma";
 import RegistroAvance from "../pages/Registro/Registro";
 import Materias from "../pages/Materias/Materias";
+import Maintenance from "../pages/Maintenance/Maintenance";
 
 // Layout
 import MainLayout from "../layouts/MainLayout";
@@ -14,7 +15,6 @@ export default function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
-
         {/* Ruta pública */}
         <Route path="/" element={<Login />} />
 
@@ -24,8 +24,9 @@ export default function AppRouter() {
           <Route path="/cronograma" element={<Cronograma />} />
           <Route path="/registro-avance" element={<RegistroAvance />} />
           <Route path="/materias" element={<Materias />} />
+          <Route path="/account-configuration" element={<Maintenance />} />
+          <Route path="/notifications" element={<Maintenance />} />
         </Route>
-
       </Routes>
     </BrowserRouter>
   );
