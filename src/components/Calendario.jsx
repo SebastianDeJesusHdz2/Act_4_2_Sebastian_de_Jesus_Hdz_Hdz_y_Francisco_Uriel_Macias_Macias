@@ -1,14 +1,5 @@
 import "./Calendario.css";
 
-const imgLeft =
-  "https://www.figma.com/api/mcp/asset/ba080159-d0c1-45c0-9743-63dae121359b";
-const imgRight =
-  "https://www.figma.com/api/mcp/asset/ea9a5995-4ee0-42dd-9861-6980b35ac25f";
-const imgLeftDark =
-  "https://www.figma.com/api/mcp/asset/88d829fa-a42a-4076-bed8-97ff5d61cf09";
-const imgRightDark =
-  "https://www.figma.com/api/mcp/asset/6ea50196-b626-4364-af64-206a5774c19b";
-
 function Calendario({ modo = "light" }) {
   const esDark = modo === "dark";
 
@@ -36,19 +27,9 @@ function Calendario({ modo = "light" }) {
     >
       <div className="calendario-header">
         <button className="calendario-nav-btn">
-          <img
-            src={esDark ? imgLeftDark : imgLeft}
-            alt="Anterior"
-            className="calendario-nav-icon"
-          />
         </button>
         <h5 className="calendario-titulo">September 2021</h5>
         <button className="calendario-nav-btn">
-          <img
-            src={esDark ? imgRightDark : imgRight}
-            alt="Siguiente"
-            className="calendario-nav-icon"
-          />
         </button>
       </div>
 
